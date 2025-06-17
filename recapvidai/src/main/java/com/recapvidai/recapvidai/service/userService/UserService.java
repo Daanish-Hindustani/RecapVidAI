@@ -1,0 +1,53 @@
+package com.recapvidai.recapvidai.service.userService;
+
+import com.recapvidai.recapvidai.utils.Util;
+import com.recapvidai.recapvidai.service.subscription.ISubscriptionService;
+
+import java.util.UUID;
+
+public class UserService {
+    private UUID id;
+    private String email;
+    private String firstName;
+    private String lastName;
+    private String password;
+    private String phoneNumber;
+    private String address;
+    private ISubscriptionService subscription;
+
+    public UserService(String email, String firstName, String lastName, String password, String phoneNumber, String address, ISubscriptionService subscription) {
+        this.id = UUID.randomUUID();
+        this.email = email;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.password = password;
+        this.phoneNumber = phoneNumber;
+        this.address = address;
+        this.subscription = subscription;
+
+    }
+
+    public void update(String email, String firstName, String lastName, String password, String phoneNumber, String address, ISubscriptionService subscription) {
+        if(Util.isEmpty(this.email)) {
+            this.email = email;
+        }
+        if(Util.isEmpty(this.firstName)) {
+            this.firstName = firstName;
+        }
+        if(Util.isEmpty(this.lastName)) {
+            this.lastName = lastName;
+        }
+        if(Util.isEmpty(this.password)) {
+            this.password = password;
+        }
+        if(Util.isEmpty(this.phoneNumber)) {
+            this.phoneNumber = phoneNumber;
+        }
+        if(Util.isEmpty(this.address)) {
+            this.address = address;
+        }
+        if(this.subscription != null) {
+            this.subscription = subscription;
+        }
+    }
+}
