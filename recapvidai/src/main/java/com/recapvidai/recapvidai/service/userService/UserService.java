@@ -1,7 +1,7 @@
-package com.recapvidai.recapvidai.services.userService;
+package com.recapvidai.recapvidai.service.userService;
 
-import com.recapvidai.recapvidai.Util;
-import com.recapvidai.recapvidai.services.subscription.ISubscriptionService;
+import com.recapvidai.recapvidai.utils.Util;
+import com.recapvidai.recapvidai.service.subscription.ISubscriptionService;
 
 import java.util.UUID;
 

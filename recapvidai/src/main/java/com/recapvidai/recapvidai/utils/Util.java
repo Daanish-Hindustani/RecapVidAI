@@ -1,4 +1,4 @@
-package com.recapvidai.recapvidai;
+package com.recapvidai.recapvidai.utils;
 
 public class Util {
     public static boolean isEmpty(String value) {
