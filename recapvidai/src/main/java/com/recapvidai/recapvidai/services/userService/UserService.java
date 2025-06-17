@@ -1,14 +1,11 @@
-package com.recapvidai.recapvidai.core.user;
+package com.recapvidai.recapvidai.services.userService;
 
 import com.recapvidai.recapvidai.Util;
-import com.recapvidai.recapvidai.core.subscription.ISubscription;
+import com.recapvidai.recapvidai.services.subscription.ISubscriptionService;
 
 import java.util.UUID;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 
-public class User {
+public class UserService {
     private UUID id;
     private String email;
     private String firstName;
@@ -16,9 +13,9 @@ public class User {
     private String password;
     private String phoneNumber;
     private String address;
-    private ISubscription subscription;
+    private ISubscriptionService subscription;
 
-    public User(String email, String firstName, String lastName, String password, String phoneNumber, String address, ISubscription subscription) {
+    public UserService(String email, String firstName, String lastName, String password, String phoneNumber, String address, ISubscriptionService subscription) {
         this.id = UUID.randomUUID();
         this.email = email;
         this.firstName = firstName;
@@ -30,7 +27,7 @@ public class User {
 
     }
 
-    public void update(String email, String firstName, String lastName, String password, String phoneNumber, String address, ISubscription subscription) {
+    public void update(String email, String firstName, String lastName, String password, String phoneNumber, String address, ISubscriptionService subscription) {
         if(Util.isEmpty(this.email)) {
             this.email = email;
         }
